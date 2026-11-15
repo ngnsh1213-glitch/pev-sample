@@ -31,14 +31,17 @@ AI에게 코드를 맡길 때 "알아서 잘 해 줘" 대신 **계획서 → 지
 
 ## 2. 준비 (10분)
 
-1. 쓸 CLI를 설치합니다. 설치 방법은 바뀔 수 있으니 각 공식 안내를 따르십시오.
-   - Claude Code: `npm install -g @anthropic-ai/claude-code`
-   - Codex: `npm install -g @openai/codex`
+1. 쓸 CLI를 설치합니다. 아래는 Windows PowerShell 기준입니다(2026-11 공식 안내). 설치 방법은 바뀔 수 있으니 막히면 공식 안내를 따르십시오.
+   - Claude Code: `irm https://claude.ai/install.ps1 | iex` — 공식 안내: https://github.com/anthropics/claude-code
+   - Codex: `powershell -ExecutionPolicy ByPass -c "irm https://chatgpt.com/codex/install.ps1 | iex"` — 공식 안내: https://github.com/openai/codex
+   - macOS·Linux 명령도 위 공식 안내에 있습니다. Claude Code의 npm 설치는 공식적으로 사용 중단(deprecated)됐습니다.
 2. 작업할 폴더(가능하면 git 리포)에 이 견본의 `CLAUDE.md`·`AGENTS.md`를 복사합니다.
 3. 두 파일 맨 아래 **「이 프로젝트의 값」** 칸을 채웁니다(빌드·실행 명령, 건드리면 안 되는 폴더 등).
 4. 폴더에 `pev/`를 만들고 `templates/`의 양식 세 개를 참고용으로 둡니다.
 
-## 3. 한 바퀴 돌리기 (2단계 기준 — 1단계는 「Codex」 자리를 새 대화로 바꿔 읽으십시오)
+## 3. 한 바퀴 돌리기
+
+2단계(두 회사 AI) 기준입니다. 1단계(AI 하나)는 「Codex」 자리를 **같은 도구의 새 대화**로 바꿔 읽으십시오.
 
 ```
  ① 엔지니어 → Claude   "이 일을 계획해 줘: <하고 싶은 일>"
